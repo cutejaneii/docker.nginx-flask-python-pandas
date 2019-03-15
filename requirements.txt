@@ -5,3 +5,4 @@ pypinyin==0.35.1
 PyYAML==5.1
 configparser==3.5.0
 regex==2019.3.12
+arrow==0.13.1
