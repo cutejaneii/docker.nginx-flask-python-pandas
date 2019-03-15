@@ -4,7 +4,6 @@ RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache bash
 
 COPY requirements.txt requirements.txt
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 COPY ./app /app
