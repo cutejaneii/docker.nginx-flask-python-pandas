@@ -1,0 +1,6 @@
+Flask==1.0.2
+requests==2.20.0
+cassandra-driver==3.17.0
+pypinyin==0.35.1
+PyYAML==5.1
+configparser==3.5.0
