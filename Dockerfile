@@ -1,17 +1,19 @@
-FROM tiangolo/uwsgi-nginx-flask:python2.7
+FROM tiangolo/uwsgi-nginx:python2.7
 
-#RUN apk add --no-cache ca-certificates
-#RUN apk add --no-cache gcc musl-dev
-#RUN apk add --no-cache bash
-#RUN apk --update add --no-cache g++
+MAINTAINER Jennifer Liao <cutejaneii@hotmail.com>
 
-RUN apt-get install build-essentia
+WORKDIR /
 
-#RUN apt-get update && \
-#    apt-get -y install gcc
-    
-    
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+# Get and install software
+RUN pip install flask wget
+RUN pip install py4j pandas cassandra-driver
+RUN pip install requests pypinyin ConfigParser arrow regex
 
-COPY ./app /app
+# copy nginx setting
+COPY nginx.conf /etc/nginx/conf.d/
+COPY uwsgi.ini /etc/uwsgi/uwsgi.ini
+
+
+COPY app /app
+
+WORKDIR /app
