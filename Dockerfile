@@ -10,9 +10,8 @@ RUN pip install py4j pandas cassandra-driver
 RUN pip install requests pypinyin ConfigParser arrow regex
 
 # copy nginx setting
-COPY nginx.conf /etc/nginx/conf.d/
+COPY nginx.conf /etc/nginx/conf.d/nginx.conf
 COPY uwsgi.ini /etc/uwsgi/uwsgi.ini
-
 
 COPY app /app
 
