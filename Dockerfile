@@ -11,6 +11,7 @@ RUN pip install requests pypinyin ConfigParser arrow regex
 
 # copy nginx setting
 COPY nginx.conf /etc/nginx/conf.d/nginx.conf
+COPY nginx2.conf /etc/nginx/nginx.conf
 COPY uwsgi.ini /etc/uwsgi/uwsgi.ini
 
 COPY app /app
