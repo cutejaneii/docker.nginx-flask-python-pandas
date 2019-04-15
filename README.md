@@ -1,4 +1,4 @@
-# docker.uwsgi-nginx-flask
+# docker.nginx-flask-python-pandas
 
 ## 指令
 
