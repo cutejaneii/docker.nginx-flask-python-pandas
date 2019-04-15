@@ -8,6 +8,7 @@ WORKDIR /
 RUN pip install flask wget
 RUN pip install py4j pandas cassandra-driver
 RUN pip install requests pypinyin ConfigParser arrow regex
+RUN pip install pyYaml
 
 # copy nginx setting
 COPY nginx.conf /etc/nginx/conf.d/nginx.conf
