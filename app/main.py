@@ -1,17 +1,10 @@
-import sys
-
 from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def hello():
-    version = "{}.{}".format(sys.version_info.major, sys.version_info.minor)
-    message = "Hello World from Flask in a uWSGI Nginx Docker container with Python {} on Alpine (default)".format(
-        version
-    )
-    return message
+    return "Hello, World!"
 
 if __name__ == "__main__":
     app.run(debug=True, port=8080)
