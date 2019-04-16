@@ -17,7 +17,7 @@ RUN pip install cassandra-driver
 RUN pip install pandas
 
 RUN pip install pypinyin
-RUN pip install regex requests jieba arrow 
+RUN pip install regex requests jieba arrow pyYaml
 
 # copy nginx setting
 #COPY nginx.conf /etc/nginx/conf.d/
