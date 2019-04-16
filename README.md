@@ -6,4 +6,4 @@
 
 
 ## 備註
-uwsgi.ini加上lazy-apps=true，避免cassandra-driver在存取資料時發生client timeout.
+uwsgi.ini加上<pre><code>lazy-apps=true</code></pre>，避免cassandra-driver在存取資料時發生client timeout.
